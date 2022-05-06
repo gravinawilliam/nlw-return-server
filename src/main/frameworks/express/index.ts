@@ -1,4 +1,5 @@
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import express, { Application } from 'express';
 import helmet from 'helmet';
 import path from 'path';
@@ -9,13 +10,17 @@ import { AppConfig, AppInfo } from '@main/config/app.config';
 import { SwaggerConfig } from '@main/config/swagger.config';
 import { showBanner } from '@main/utils/banner.util';
 
+import routes from './routes';
+
 export class ExpressFramework {
   public async execute(): Promise<Application> {
     const app = this.initializeSwagger(express());
+    app.use(cors());
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(cookieParser());
     app.use(helmet());
+    app.use(routes);
     await app.listen(AppConfig.PORT, () => showBanner());
     return app;
   }

@@ -1,0 +1,19 @@
+# Create User
+
+## Parameters
+ - type ( 'BUG' | 'IDEA' | 'OTHER')
+ - content (string)
+ - screenshot (string | null)
+
+## Result Success
+ - feedback
+    - id (string)
+
+## Result Error
+ - Invalid parameter type
+ - Invalid content type
+
+## Business rules
+  - verificar se o type é válido
+  - verificar se o content é maior do que 0 caracteres
+  - salvar o feedback

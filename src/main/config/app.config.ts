@@ -15,7 +15,7 @@ const AppConfig = {
   PORT: getEnvironmentNumber('APP_PORT', 3000),
   BASE_PATH: getEnvironmentString('BASE_PATH', ''),
   DOCS_PATH: getEnvironmentString('DOCS_PATH', '/docs'),
-  FRAMEWORK: getEnvironmentString('FRAMEWORK', 'express') as 'express' | 'nestjs'
+  FRAMEWORK: getEnvironmentString('FRAMEWORK', 'nestjs') as 'express' | 'nestjs'
 };
 
 export { AppConfig, AppInfo };

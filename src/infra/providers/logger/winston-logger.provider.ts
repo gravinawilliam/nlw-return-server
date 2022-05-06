@@ -3,8 +3,14 @@ import 'winston-daily-rotate-file';
 import emoji from 'node-emoji';
 import { addColors, createLogger, format, Logger as WinstonLoggerType, transports } from 'winston';
 
-import { ILoggerErrorProvider, LoggerErrorProviderDTO } from '@domain/providers/logger/logger-error-provider.interface';
-import { ILoggerInfoProvider, LoggerInfoProviderDTO } from '@domain/providers/logger/logger-info-provider.interface';
+import {
+  ILoggerErrorProvider,
+  LoggerErrorProviderDTO
+} from '@domain/providers/logger/logger-error-provider.interface';
+import {
+  ILoggerInfoProvider,
+  LoggerInfoProviderDTO
+} from '@domain/providers/logger/logger-info-provider.interface';
 import { GlobalConfig } from '@infra/configs/infra.config';
 
 enum LevelName {

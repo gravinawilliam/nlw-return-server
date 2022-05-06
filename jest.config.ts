@@ -74,10 +74,7 @@ const config: Config.InitialOptions = {
   coverageDirectory: 'coverage',
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.ts',
-    '!<rootDir>/src/main/**/*.ts',
-    '!<rootDir>/src/infra/**/*.ts',
-    '!<rootDir>/src/domain/shared/utils/either.util.ts'
+    '<rootDir>/src/application/**/*.ts',
   ],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules',

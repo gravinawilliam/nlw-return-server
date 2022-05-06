@@ -103,7 +103,7 @@ module.exports = {
           tryExtensions: ['.json', '.node', '.js', '.ts', '.d.ts']
         }
       },
-      rules: {
+      rules: {     'node/no-unpublished-import': 'off',
         '@typescript-eslint/no-namespace': 'off',
         'prettier/prettier': 'error',
         // For faster development
