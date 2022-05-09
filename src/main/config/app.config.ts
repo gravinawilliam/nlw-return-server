@@ -12,7 +12,7 @@ const AppInfo = {
 };
 
 const AppConfig = {
-  PORT: getEnvironmentNumber('APP_PORT', 3000),
+  PORT: getEnvironmentNumber('PORT', 3000),
   BASE_PATH: getEnvironmentString('BASE_PATH', ''),
   DOCS_PATH: getEnvironmentString('DOCS_PATH', '/docs'),
   FRAMEWORK: getEnvironmentString('FRAMEWORK', 'nestjs') as 'express' | 'nestjs'
