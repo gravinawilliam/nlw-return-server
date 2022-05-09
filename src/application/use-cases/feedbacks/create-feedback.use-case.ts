@@ -30,6 +30,7 @@ export class CreateFeedbackUseCase implements ICreateFeedbackUseCase {
         `<div style="font-family= sans-serif; font-size: 16px; color: #21203f">`,
         `<p>Tipo do feedback: ${parameters.type}</p>`,
         `<p>Comentário: ${parameters.comment}</p>`,
+        parameters.screenshot ? `<img src="${parameters.screenshot}" />` : '',
         `</div>`
       ].join('\n'),
       subject: 'Novo feedback'
